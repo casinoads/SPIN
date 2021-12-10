@@ -1,11 +1,18 @@
-/* @media (max-width: 1140px) {
+ /* @media (max-width: 1140px) {
     .main-cont {
         padding-left: 10px;
         padding-right: 10px;
+        
     }
     .desktop-header {
         display: none !important;
     }
+
+} */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,500;0,700;1,300;1,400;1,600&display=swap');
+
+body{
+    font-family: 'Kanit', sans-serif;
 }
 
 @media (max-width: 960px) {
@@ -18,8 +25,8 @@
 
 @media (max-width: 540px) {
    
-} */
-/* .suff-box {
+} 
+ .suff-box {
     position: absolute;
     width: 300px;
     height: 300px;
@@ -63,14 +70,15 @@
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
-} */
+} 
 
-@import url(//fonts.googleapis.com/css?family=Roboto);
+
 #trungthuong-10 {
     padding: 0px !important;
 }
 button:focus {
     outline: 0;
+    
 }
 
 /* man hinh tu X px tro len */
@@ -78,6 +86,7 @@ button:focus {
     .main-cont {
         padding-left: 80px;
         padding-right: 80px;
+        
     }
 }
 
@@ -101,7 +110,10 @@ button:focus {
     .main-cont {
         padding-left: 30px;
         padding-right: 30px;
+
+        
     }
+    
     .catback-logo {
         display: block;
     }
@@ -109,6 +121,7 @@ button:focus {
         /* text-align: end; */
         padding: 15px 15px;
     }
+    
 }
 
 @media only screen and (max-width: 800px) {
@@ -226,6 +239,7 @@ button:focus {
         margin-bottom: -24px;
         margin-left: -122%;
         border-radius: 50%;
+        
     }
     .right-cont:before {
         content: " ";
@@ -438,6 +452,9 @@ button:focus {
         padding: 1px !important;
     }
 }
+
+
+
 @media (max-width: 380px) {
     .circle-day-jnd {
         background-image: url(./assets/img/day-jnd.png);
@@ -487,6 +504,27 @@ button:focus {
         display: inline-block;
     }
 }
+
+@media (max-width: 480px) {
+   
+    .loginpc{
+        display: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        outline: none;
+        }
+    }
+@media (min-width: 480px) {
+
+    .loginMB{
+        display: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        outline: none;
+        }
+    }
 
 .btn-wheel {
     background-size: contain;
@@ -766,3 +804,4 @@ button:focus {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 } */
+
