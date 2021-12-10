@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <title>axios - all example</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  </head>
+  <body class="container">
+    <h1>axios.all</h1>
+
+    <div>
+      <h3>User</h3>
+      <div class="row">
+        <img id="useravatar" src="" class="col-md-1"/>
+        <div class="col-md-3">
+          <strong id="username"></strong>
+        </div>
+      </div>
+      <hr/>
+      <h3>Orgs</h3>
+      <ul id="postpic" class="list-unstyled"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cheerio/1.0.0-rc.10/lib/index.min.js" integrity="sha512-fNzFFM+H5XayZzB+PQ7C+oPObmbZIzqvweIQEPQ/Ou5t/x+yR9PNwAi6EY0LYWN/N0/FMebARzjCRxiUkNuc/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+       
+        async function getGenre() {
+            try {
+              const response = await axios.get('https://aapsite.com/stock1jetsadabetresult.php');
+              const document = cheerio.load(response.data);
+              const genre = document("h1").text();
+              console.log(genre);
+            } catch (error) {
+              console.error(error);
+            }
+          }
+          getGenre();
+		
+		  async function listdata() {
+			try {
+			  const response = await axios.get('https://aapsite.com/stock1jetsadabetresult.php');
+			  const $ = cheerio.load(response.data);
+			  var setPost = [];
+              const genre = $("h1").text();
+              console.log(genre);
+			  Data.forEach(function(element) {
+			  var content = element.content.rendered;
+			  var date_gmt = element.date_gmt;
+			  var link = element.link;
+			  var color = ['color-warning','color-success','color-primary'];
+			  var colorRandom = color[Math.floor(Math.random() * color.length)]
+			  var title = element.title.rendered;
+			  var imgs = content.match(/http[^>]*jpg/gm);
+			  var listpost = 
+
+			  `<article class="post has-post-thumbnail">
+				<div class="post__thumbnail">
+					<a href="${link}"><img src="${imgs}" alt="ufax-${date_gmt}"></a>
+				</div>
+				<div class="post__body">
+					<div class="post__header">
+						<ul class="post__cats list-unstyled">
+							<li class="post__cats-item ${colorRandom}">
+								<a href="${link}">UFAX24</a>
+							</li>
+						</ul>
+						<h2 class="post__title h6"><a href="${link}">${title}</a></h2>
+						<ul class="post__meta list-unstyled">
+							<li class="post__meta-item post__meta-item--date">
+								<a href="#">POSTED ON ${date_gmt} BY UFAX24</a>
+							</li>
+						</ul>
+					</div>
+					<div class="post__excerpt">
+						${title}
+					</div>
+				</div>
+			</article>`
+			  setPost.push(listpost)
+				
+			  })
+			  //console.log(setPost)
+			  document.getElementById('postpic').insertAdjacentHTML('beforeend', setPost);
+			  
+			  //document.getElementById('postpic').appendChild(postpic);
+			  //console.log(content);
+			
+			} catch (error) {
+			  console.error(error);
+			   }
+			}
+
+		
+    </script>
+  </body>
+</html>
