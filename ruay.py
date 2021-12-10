@@ -48,23 +48,27 @@ class ruay:
         #print(data)
         return data
 
-    while True:
-        time.sleep(5)
-        RoundNext = re.sub(r"\s+", ",",NextRound())
-        AllDataRound = AllRound()
+    #while True:
+    time.sleep(1)
+    RoundNext = re.sub(r"\s+", ",",NextRound())
+    AllDataRound = AllRound()
+    
+    ruayDATA = db.reference('LOTTO/RoundSET/ruay')
+    ResRound = ruayDATA.get()['Round']
+    print(RoundNext,ResRound)
+    
+    #print("NextRound ruay: " , RoundNext)
+    if RoundNext == ResRound:
+        pass
+    else:
         LOTTO_ref.child('RoundSET').update({ 
             'ruay': {
             'Round': RoundNext
-               }
+                }
             })
         print("NextRound ruay: " , RoundNext)
-        ruayDATA = db.reference('LOTTO/RoundSET/ruay')
-        if RoundNext != ruayDATA.get()['Round']:
-
-            
-            LOTTO_ref.child('ALLDATA/ruay').set( AllDataRound )
-            print("NEW!Round mawinbet")
-        
+        LOTTO_ref.child('ALLDATA/ruay').update(AllDataRound)
+        print("NEW!Round ruay",ruayDATA)
 
         # Round_file = open("Round_file.json", "w")
         # json.dump({'ruay':RoundNext}, Round_file, indent = 6)

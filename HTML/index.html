@@ -41,25 +41,25 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
-       
-       
+
+
         const firebaseConfig = {
-          apiKey: "AIzaSyAPqGrvSFcDr18h1zEQIhsusjOtjKanTt4",
-          authDomain: "ufapro889s.firebaseapp.com",
-          databaseURL: "https://ufapro889s-default-rtdb.firebaseio.com",
-          projectId: "ufapro889s",
-          storageBucket: "ufapro889s.appspot.com",
-          messagingSenderId: "351494826911",
-          appId: "1:351494826911:web:f54710e7f72098310a6baa",
-          measurementId: "${config.measurementId}"
+            apiKey: "AIzaSyAPqGrvSFcDr18h1zEQIhsusjOtjKanTt4",
+            authDomain: "ufapro889s.firebaseapp.com",
+            databaseURL: "https://ufapro889s-default-rtdb.firebaseio.com",
+            projectId: "ufapro889s",
+            storageBucket: "ufapro889s.appspot.com",
+            messagingSenderId: "351494826911",
+            appId: "1:351494826911:web:f54710e7f72098310a6baa",
+            measurementId: "${config.measurementId}"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
-       
-        
-      </script>
+
+
+    </script>
 
 </head>
 
@@ -84,7 +84,7 @@
                     <div class="row">
                         <div class="col-xl-4 offset-xl-1 col-lg-5 offset-lg-2 col-md-6 offset-md-1 col">
                             <a href="#">
-                                
+
                             </a>
                         </div>
 
@@ -97,7 +97,7 @@
                 <div class="col-xl-4 col-md-2 col-sm-12" style="padding:5px">
                     <div class="d-flex justify-content-between">
                         <img class="catback-logo" src="./img/UFAPRO888.png" width="200px">
-                            <img src="./img/loading.gif" width="50px"  data-toggle="modal" data-target="trungthuong-10">
+                        <img src="./img/loading.gif" width="50px" data-toggle="modal" data-target="trungthuong-10">
                     </div>
                 </div>
             </div>
@@ -118,16 +118,17 @@
                 <div class="col-lg-8 col-sm-12" style="padding:0px">
                     <div class="col-lg-12"
                         style="background-image: linear-gradient( #E2815B, #F7BD97);border-radius: 15px;height: 450px;">
-                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal" data-target="#trungthuong-ruay">
+                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal"
+                            data-target="#trungthuong-ruay">
                             <div class="user-card-contain d-flex justify-content-between">
                                 <div class="row">
                                     <div style="padding:8px;margin-left: 15px;">
                                         <img src="./img/ruay.png" width="45px">
                                     </div>
                                     <div class="d-flex align-items-center" style="color:#6C0B01;font-size:18px">
-                                        <span id="HUAY_RES"></span>
+                                        <span id="RUAY_RES"></span>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="d-flex align-items-center" style="padding:10px">
                                     <img src="./img/ruay.png" width="55px">
@@ -135,18 +136,17 @@
                             </div>
                             <div class="user-card-backshadow"></div>
                         </div>
-                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal" data-target="#trungthuong-lottovip">
+                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal"
+                            data-target="#trungthuong-lottovip">
                             <div class="user-card-contain d-flex justify-content-between">
                                 <div class="row">
                                     <div style="padding:8px;margin-left: 15px;">
                                         <img src="./img/lottovip.png" width="45px">
                                     </div>
                                     <div class="d-flex align-items-center" style="color:#6C0B01;font-size:18px">
-                                        <b>Đinh Lan Anh</b>
+                                        <span id="LOTTOVIP_RES"></span>
                                     </div>
-                                    <div class="d-flex align-items-center" style="color:#DD2325;font-size:15px">
-                                        (ho******92@gmail.com)
-                                    </div>
+                                    
                                 </div>
                                 <div class="d-flex align-items-center" style="padding:10px">
                                     <img src="./img/lottovip.png" width="55px">
@@ -155,18 +155,17 @@
                             <div class="user-card-backshadow"></div>
                         </div>
 
-                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal" data-target="#trungthuong-OFFLINE">
+                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal"
+                            data-target="#trungthuong-OFFLINE">
                             <div class="user-card-contain d-flex justify-content-between">
                                 <div class="row">
                                     <div style="padding:8px;margin-left: 15px;">
                                         <img src="./img/Huay_logo.svg" width="45px">
                                     </div>
                                     <div class="d-flex align-items-center" style="color:#6C0B01;font-size:18px">
-                                        <b>tuyen ho</b>
+                                        <span id="HUAY_RES"></span>
                                     </div>
-                                    <div class="d-flex align-items-center" style="color:#DD2325;font-size:15px">
-                                        (ho******39@gmail.com)
-                                    </div>
+                                    
                                 </div>
                                 <div class="d-flex align-items-center" style="padding:10px">
                                     <img src="./img/Huay_logo.svg" width="55px">
@@ -175,18 +174,17 @@
                             <div class="user-card-backshadow"></div>
                         </div>
 
-                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal" data-target="#trungthuong-jatsadabet">
+                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal"
+                            data-target="#trungthuong-jatsadabet">
                             <div class="user-card-contain d-flex justify-content-between">
                                 <div class="row">
                                     <div style="padding:8px;margin-left: 15px;">
                                         <img src="./img/jatsadabet.png" width="45px">
                                     </div>
                                     <div class="d-flex align-items-center" style="color:#6C0B01;font-size:18px">
-                                        <b>MonKey NooB</b>
+                                        <span id="JETSADABET_RES"></span>
                                     </div>
-                                    <div class="d-flex align-items-center" style="color:#DD2325;font-size:15px">
-                                        (da******84@gmail.com)
-                                    </div>
+                                  
                                 </div>
                                 <div class="d-flex align-items-center" style="padding:10px">
                                     <img src="./img/jatsadabet.png" width="55px">
@@ -194,22 +192,21 @@
                             </div>
                             <div class="user-card-backshadow"></div>
                         </div>
-                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal" data-target="#trungthuong-mawin">
+                        <div class="user-card col-12" style="margin-bottom: 5%;" data-toggle="modal"
+                            data-target="#trungthuong-mawin">
                             <div class="user-card-contain d-flex justify-content-between">
                                 <div class="row">
                                     <div style="padding:8px;margin-left: 15px;">
                                         <img src="./img/มาวินเบท.png" width="45px">
                                     </div>
                                     <div class="d-flex align-items-center" style="color:#6C0B01;font-size:18px">
-                                        <b>MonKey NooB</b>
+                                        <span id="MAWINBET_RES"></span>
                                     </div>
-                                    <div class="d-flex align-items-center" style="color:#DD2325;font-size:15px">
-                                        (da******84@gmail.com)
-                                    </div>
+                                    
                                 </div>
                                 <div class="d-flex align-items-center" style="padding:10px">
-                                    <h3>1️⃣2️⃣</h3>
-                                    <!-- <img src="./img/มาวินเบท.png" width="55px">-->
+                                   
+                                    <img src="./img/มาวินเบท.png" width="55px">
                                 </div>
                             </div>
                             <div class="user-card-backshadow"></div>
@@ -219,36 +216,49 @@
 
                     <!-- HUAY -->
                     <script>
-                    $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/huay/1.json?print=pretty', function(data) {
-                      console.log(data)
-                      document.getElementById("HUAY_RES").innerHTML = "<h5 style='color:red;font-size:12px;'>"+data[0]+"</h5><h3>3️⃣ ตัว "+data[1]+" 2️⃣ ตัว "+data[2]+"</h3>";
-                    });
-                    
+                        $(document).ready(function () {
+                            $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/huay/1.json?print=pretty', function (data) {
+                                console.log(data)
+                                document.getElementById("HUAY_RES").innerHTML = "<h5 style='color:red;font-size:12px;'>" + data[0] + "</h5><h3>3️⃣ ตัว " + data[1] + " 2️⃣ ตัว " + data[2] + "</h3>";
+                            });
+                        })
                     </script>
                     <!-- RUAY -->
                     <script>
-                        $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/ruay/1.json?print=pretty', function(data) {
-                          console.log(data)
-                        });
-                        </script>
+                        $(document).ready(function () {
+                            $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/ruay/1.json?print=pretty', function (data) {
+                                console.log(data)
+                                document.getElementById("RUAY_RES").innerHTML = "<h5 style='color:red;font-size:12px;'>" + data[0] + "</h5><h3>3️⃣ ตัว " + data[1] + " 2️⃣ ตัว " + data[2] + "</h3>";
+                            });
+                        })
+                    </script>
                     <!-- LOTTOVIP -->
                     <script>
-                        $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/lottovip/1.json?print=pretty', function(data) {
-                          console.log(data)
+                        $(document).ready(function () {
+                        $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/lottovip/1.json?print=pretty', function (data) {
+                            console.log(data)
+                            document.getElementById("LOTTOVIP_RES").innerHTML = "<h5 style='color:red;font-size:12px;'>" + data[0] + "</h5><h3>3️⃣ ตัว " + data[1] + " 2️⃣ ตัว " + data[2] + "</h3>";
                         });
-                        </script>
+                    })
+                    </script>
                     <!-- JETSADA -->
                     <script>
-                        $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/jetsadabet/1.json?print=pretty', function(data) {
-                          console.log(data)
+                        $(document).ready(function () {
+                        $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/jetsadabet/1.json?print=pretty', function (data) {
+                            console.log(data)
+                            document.getElementById("JETSADABET_RES").innerHTML = "<h5 style='color:red;font-size:12px;'>" + data[0] + "</h5><h3>3️⃣ ตัว " + data[1] + " 2️⃣ ตัว " + data[2] + "</h3>";
                         });
-                        </script>
+                    })
+                    </script>
                     <!-- MAWIN -->
                     <script>
-                        $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/mawinbet/1.json?print=pretty', function(data) {
-                          console.log(data)
+                        $(document).ready(function () {
+                        $.getJSON('https://ufapro889s-default-rtdb.firebaseio.com/LOTTO/ALLDATA/mawinbet/1.json?print=pretty', function (data) {
+                            console.log(data)
+                            document.getElementById("MAWINBET_RES").innerHTML = "<h5 style='color:red;font-size:12px;'>" + data[0] + "</h5><h3>3️⃣ ตัว " + data[1] + " 2️⃣ ตัว " + data[2] + "</h3>";
                         });
-                        </script>
+                    })
+                    </script>
 
                 </div>
                 <!-- vong quay
@@ -260,7 +270,7 @@
                     </a>
                    
                 </div> -->
-                
+
             </div>
 
             <img class="hd-item" src="./img/sport-casino.png" style="width:100%;margin-top: 10%;">
@@ -289,8 +299,7 @@
             <img class="vqmm-title" src="./img/bg_01.png" width="50px" style="margin-top: 35%;">-->
             <div class="d-flex justify-content-between" style="margin-left:-65px;margin-right: 45px;padding:10px;">
                 <div class="d-flex align-items-center" style="padding:20px">
-                    <img class="prev slick-arrow" src="./img/left-arrow.svg" width="15px"
-                        style="cursor: pointer;">
+                    <img class="prev slick-arrow" src="./img/left-arrow.svg" width="15px" style="cursor: pointer;">
                 </div>
                 <div class="col-12" style="border: 2px solid #C63B10;padding:10px;border-radius:15px;height: 155px;">
                     <section class="regular slider">
@@ -395,8 +404,7 @@
                 </div>
 
                 <div class="d-flex align-items-center" style="padding:10px">
-                    <img class="next slick-arrow" src="./img/right-arrow.svg" width="15px"
-                        style="cursor: pointer;">
+                    <img class="next slick-arrow" src="./img/right-arrow.svg" width="15px" style="cursor: pointer;">
                 </div>
             </div>
 
@@ -404,7 +412,7 @@
 
 
         <!-- section 3 -->
-        
+
         <!-- modal trung thuong 100k -->
         <div class="modal fade" id="trungthuong-linebot" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -424,16 +432,13 @@
                                     <div class="d-flex justify-content-between"
                                         style="padding:5px 10px;background-color: #F94F43;color: #fff;border-radius: 5px;">
                                         <div>
-                                            <img class="next slick-arrow" src="./img/ruay.png"
-                                                width="55px">
+                                            <img class="next slick-arrow" src="./img/ruay.png" width="55px">
                                         </div>
                                         <div class="d-flex align-items-center" style="padding-left:8px">
-                                            <img class="next slick-arrow" src="./img/title-stick.png"
-                                                width="15px">
+                                            <img class="next slick-arrow" src="./img/title-stick.png" width="15px">
                                         </div>
                                         <div>
-                                            <img class="next slick-arrow" src="./img/UFAPRO888.png"
-                                                width="255px">
+                                            <img class="next slick-arrow" src="./img/UFAPRO888.png" width="255px">
                                         </div>
                                     </div>
                                 </div>
@@ -457,7 +462,7 @@
                                     <div style="padding: 8px 0">
                                         <h4>---------USER 1 ต่อ 1 BOT-------</h4>
                                     </div>
-                                    
+
                                     <div class="row" style="padding: 3px 0">
                                         <div class="col-6" style="padding-right: 5px;">
                                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
@@ -469,10 +474,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                        <div style="padding: 8px 0">
-                                            <input type="text" class="form-control" placeholder="ข้อเสนอ แนะนำ">
-                                        </div>
-                                    
+                                    <div style="padding: 8px 0">
+                                        <input type="text" class="form-control" placeholder="ข้อเสนอ แนะนำ">
+                                    </div>
+
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <a href="#" style="text-decoration:none;">
@@ -483,7 +488,8 @@
                                     </a>
                                 </div>
                                 <div style="font-size: 14px;color: #828282;padding:10px 0px">
-                                    <i>บริการ ฟรี สำหรับท่านเป็นสมาชิก กับ UFAPRO888S.CO และยังมี บริการ อื่นๆอีกมากมาย ที่กำลังนำออกมาให้บริการ ท่านสมาชิก
+                                    <i>บริการ ฟรี สำหรับท่านเป็นสมาชิก กับ UFAPRO888S.CO และยังมี บริการ อื่นๆอีกมากมาย
+                                        ที่กำลังนำออกมาให้บริการ ท่านสมาชิก
                                     </i>
                                 </div>
                             </div>
@@ -516,8 +522,7 @@
                                             <div style="font-size: 18px;font-weight: bold;">20.000 Đ</div>
                                         </div>
                                         <div class="d-flex align-items-center" style="padding-left:8px">
-                                            <img class="next slick-arrow" src="./img/title-stick.png"
-                                                width="15px">
+                                            <img class="next slick-arrow" src="./img/title-stick.png" width="15px">
                                         </div>
                                     </div>
                                 </div>
@@ -590,8 +595,8 @@
                 <div class="modal-content"
                     style="border-radius:30px;border:5px solid #FFC764;background-image: linear-gradient(#FD7045, #E13432)">
                     <div class="" style="color:#fff;padding:10px">
-                        <div class="d-flex justify-content-center"><img src="./img/หมวกแดง.jpg"
-                                width="100px" height="80px"></div>
+                        <div class="d-flex justify-content-center"><img src="./img/หมวกแดง.jpg" width="100px"
+                                height="80px"></div>
                         <div style="text-align:center;padding:10px 0;">
                             Rất tiếc, bạn đã hết lượt quay hôm nay. Vui lòng quay lại vào ngày mai để nhận thêm lượt
                             quay mới nhé.
@@ -617,8 +622,8 @@
                 <div class="modal-content"
                     style="border-radius:30px;border:5px solid #FFC764;background-image: linear-gradient(#FD7045, #E13432)">
                     <div class="" style="color:#fff;padding:10px">
-                        <div class="d-flex justify-content-center"><img src="./img/PngItem_2550411.png"
-                                width="100px" height="80px"></div>
+                        <div class="d-flex justify-content-center"><img src="./img/PngItem_2550411.png" width="100px"
+                                height="80px"></div>
                         <div style="text-align:center;padding:10px 0;">
                             ขออภัยในความไม่สะดวก ระบบ กำลัง แก้ไข ปัญหา
                         </div>
@@ -636,15 +641,15 @@
             </div>
         </div>
         <!-- modal het luot quay -->
-        
+
         <!-- modal them luot -->
-        
+
         <!-- modal them luot -->
         <div id="tapd" class="col-sm-12" style="position: fixed;bottom: 0;left: 0;max-width: 300px;">
-      </div>
+        </div>
     </div>
 
- <!--<script>
+    <!--<script>
     function extraTurn() {
         countt += 2;
         $("#turn-count").text("Quay " + countt);

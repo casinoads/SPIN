@@ -48,21 +48,27 @@ class huay:
         #print(data)
         return data
 
-    while True:
-        time.sleep(5)
-        RoundNext = re.sub(r"\s+", ",",NextRound())
-        AllDataRound = AllRound()
+    #while True:
+    time.sleep(1)
+    RoundNext = re.sub(r"\s+", ",",NextRound())
+    AllDataRound = AllRound()
+    
+    huayDATA = db.reference('LOTTO/RoundSET/huay')
+    ResRound = huayDATA.get()['Round']
+    print(RoundNext,ResRound)
+    
+    
+    if RoundNext == ResRound:
+        pass
+    else:
         LOTTO_ref.child('RoundSET').update({ 
             'huay': {
             'Round': RoundNext
                 }
             })
-        print("Round huay: " , RoundNext)
-        huayDATA = db.reference('LOTTO/RoundSET/huay')
-        if RoundNext != huayDATA.get()['Round']:
-            
-            LOTTO_ref.child('ALLDATA/huay').set( AllDataRound )
-            print("NEW!Round huay")
+        print("NextRound huay: " , RoundNext)
+        LOTTO_ref.child('ALLDATA/huay').update(AllDataRound)
+        print("NEW!Round huay",huayDATA)
         
             
 

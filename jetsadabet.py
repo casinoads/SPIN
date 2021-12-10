@@ -48,20 +48,27 @@ class jetsadabet:
         #print(data)
         return data
 
-    while True:
-        time.sleep(5)
-        RoundNext = re.sub(r"\s+", ",",NextRound())
-        AllDataRound = AllRound()
+    #while True:
+    time.sleep(1)
+    RoundNext = re.sub(r"\s+", ",",NextRound())
+    AllDataRound = AllRound()
+    
+    jetsadabetDATA = db.reference('LOTTO/RoundSET/jetsadabet')
+    ResRound = jetsadabetDATA.get()['Round']
+    print(RoundNext,ResRound)
+    
+    #print("NextRound jetsadabet: " , RoundNext)
+    if RoundNext == ResRound:
+        pass
+    else:
         LOTTO_ref.child('RoundSET').update({ 
             'jetsadabet': {
             'Round': RoundNext
-            }
+                }
             })
         print("NextRound jetsadabet: " , RoundNext)
-        jetsadabetDATA = db.reference('LOTTO/RoundSET/jetsadabet')
-        if RoundNext != jetsadabetDATA.get()['Round']:
-            LOTTO_ref.child('ALLDATA/jetsadabet').set( AllDataRound )
-            print("NEW!Round jetsadabet")
+        LOTTO_ref.child('ALLDATA/jetsadabet').update(AllDataRound)
+        print("NEW!Round jetsadabet",jetsadabetDATA)
 
 
         # Round_file = open("Round_file.json", "w")

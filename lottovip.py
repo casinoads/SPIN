@@ -48,20 +48,27 @@ class lottovip:
         #print(data)
         return data
 
-    while True:
-        time.sleep(5)
-        RoundNext = re.sub(r"\s+", ",",NextRound())
-        AllDataRound = AllRound()
+    #while True:
+    time.sleep(1)
+    RoundNext = re.sub(r"\s+", ",",NextRound())
+    AllDataRound = AllRound()
+    
+    lottovipDATA = db.reference('LOTTO/RoundSET/lottovip')
+    ResRound = lottovipDATA.get()['Round']
+    print(RoundNext,ResRound)
+    
+    #print("NextRound lottovip: " , RoundNext)
+    if RoundNext == ResRound:
+        pass
+    else:
         LOTTO_ref.child('RoundSET').update({ 
             'lottovip': {
             'Round': RoundNext
-                 }
+                }
             })
         print("NextRound lottovip: " , RoundNext)
-        lottovipDATA = db.reference('LOTTO/RoundSET/lottovip')
-        if RoundNext != lottovipDATA.get()['Round']:
-            LOTTO_ref.child('ALLDATA/lottovip').set( AllDataRound )
-            print("NEW!Round lottovip")
+        LOTTO_ref.child('ALLDATA/lottovip').update(AllDataRound)
+        print("NEW!Round lottovip",lottovipDATA)
        
 
 
