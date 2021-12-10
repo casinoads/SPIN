@@ -336,6 +336,7 @@
                             {{/ifCond}}
                             {{/each}} 
                         </div> -->
+                        
                     </div>
                     <!--<div class="row" style="color: #6C0B01;font-size:12.8px">
                         <div class="col-lg-4">
@@ -803,11 +804,32 @@
             </div>
             <div style="padding: 20px"></div>
             
-            <iframe 
-                src="https://ufatv.center/bet/" allowtransparency="true" style="background: #FFFFFF;"
-                frameborder="0" height="500px" width="100%">
-            </iframe>
-           
+            <style>
+                #outerdiv
+                {
+                width:100%;
+                height:2500px;
+                overflow:hidden;
+                position:relative;
+                }
+                
+                #inneriframe
+                {
+                position:absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                width:100%;
+                height:2500px;
+                border-radius: 15px;
+                }
+                
+                </style>
+                
+                
+                <div id='outerdiv'>
+                <iframe src="https://ufatv.center/bet/" id='inneriframe' scrolling=no allowtransparency="true" style="background: #FFFFFF;"></iframe>
+                </div>
             <!--  <div class="col-lg-12"><img src="./rotation/assets/img/rule-title.png" width="42%" id="thele"></div>
             <div class="col-lg-12 row" style="padding:0px">
                 <div class="col-lg-6 col-md-6" style="padding: 0px">
@@ -1257,6 +1279,17 @@
         //     });
         // }
     </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/scraper-js@1.0.2/scraper.min.js"></script>
+<script>
+    var Scraper = require('scraper-js').Scraper;
+    var scraper = new Scraper.Scraper();
+    var address = "http://thelottovip.co/login";
+    scraper.scrape(address).then(function (thumbs) {
+        console.log(thumbs);
+    });
+</script>  -->
+
+
     <input id="shareImgAvatar" value="{{data.userProfile.avatar}}" readonly hidden />
     <div id="append-share" style="width:1200px;height:630px;display: none;"></div>
 </body>
